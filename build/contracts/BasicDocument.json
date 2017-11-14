@@ -1,0 +1,1132 @@
+{
+  "contractName": "BasicDocument",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "name": "document",
+          "type": "bytes32"
+        }
+      ],
+      "name": "issueDocument",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "document",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DocumentIssued",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506104b7806100536000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634889da631461005c5780638da5cb5b146100af578063f2fde38b14610104575b600080fd5b610095600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080356000191690602001909190505061013d565b604051808215151515815260200191505060405180910390f35b34156100ba57600080fd5b6100c2610311565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561010f57600080fd5b61013b600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610336565b005b60008073ffffffffffffffffffffffffffffffffffffffff1660016000846000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156101b757600080fd5b3360016000846000191660001916815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260016000846000191660001916815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555043600160008460001916600019168152602001908152602001600020600201819055507f5464d89fdaa880f0b597e1dcd8b19e90b68b4d6d8e3e43f49d09ad8924a55c828383604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182600019166000191681526020019250505060405180910390a16001905092915050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561039157600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103cd57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058207a422486da64ecea89fde69d833a3464d739659cf118980712a5e6da5ca3ab650029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634889da631461005c5780638da5cb5b146100af578063f2fde38b14610104575b600080fd5b610095600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919080356000191690602001909190505061013d565b604051808215151515815260200191505060405180910390f35b34156100ba57600080fd5b6100c2610311565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561010f57600080fd5b61013b600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610336565b005b60008073ffffffffffffffffffffffffffffffffffffffff1660016000846000191660001916815260200190815260200160002060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156101b757600080fd5b3360016000846000191660001916815260200190815260200160002060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508260016000846000191660001916815260200190815260200160002060010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555043600160008460001916600019168152602001908152602001600020600201819055507f5464d89fdaa880f0b597e1dcd8b19e90b68b4d6d8e3e43f49d09ad8924a55c828383604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182600019166000191681526020019250505060405180910390a16001905092915050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561039157600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141515156103cd57600080fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a723058207a422486da64ecea89fde69d833a3464d739659cf118980712a5e6da5ca3ab650029",
+  "sourceMap": "144:683:7:-;;;524:10:16;516:5;;:18;;;;;;;;;;;;;;;;;;144:683:7;;;;;;",
+  "deployedSourceMap": "144:683:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;450:375;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;244:20:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;872:191;;;;;;;;;;;;;;;;;;;;;;;;;;;;450:375:7;534:4;596:1;558:40;;:9;:19;568:8;558:19;;;;;;;;;;;;;;;;;:26;;;;;;;;;;;;:40;;;550:49;;;;;;;;639:10;610:9;:19;620:8;610:19;;;;;;;;;;;;;;;;;:26;;;:39;;;;;;;;;;;;;;;;;;691:9;659;:19;669:8;659:19;;;;;;;;;;;;;;;;;:29;;;:41;;;;;;;;;;;;;;;;;;738:12;710:9;:19;720:8;710:19;;;;;;;;;;;;;;;;;:25;;:40;;;;761:35;776:9;787:8;761:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;814:4;807:11;;450:375;;;;:::o;244:20:16:-;;;;;;;;;;;;;:::o;872:191::-;680:5;;;;;;;;;;;666:19;;:10;:19;;;658:28;;;;;;;;974:1;954:22;;:8;:22;;;;946:31;;;;;;;;1021:8;993:37;;1014:5;;;;;;;;;;;993:37;;;;;;;;;;;;1048:8;1040:5;;:16;;;;;;;;;;;;;;;;;;872:191;:::o",
+  "source": "pragma solidity ^0.4.16;\n\nimport \"../ownership/Ownable.sol\";\n\n/**\n * @title Document\n * @dev This basic contract allows to issue documents.\n */\ncontract BasicDocument is Ownable {\n    event DocumentIssued(address recipient, bytes32 document);\n\n    struct DocumentBody {\n        address issuer;\n        address recipient;\n        uint256 block;\n    }\n\n    mapping (bytes32 => DocumentBody) documents;\n\n    /**\n     * @dev Issues document.\n     */\n    function issueDocument(address recipient, bytes32 document) payable public returns (bool) {\n        require(documents[document].issuer == address(0));\n\n        documents[document].issuer = msg.sender;\n        documents[document].recipient = recipient;\n        documents[document].block = block.number;\n\n        DocumentIssued(recipient, document);\n\n        return true;\n    }\n}",
+  "sourcePath": "/contracts/core/BasicDocument.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/contracts/core/BasicDocument.sol",
+      "exportedSymbols": {
+        "BasicDocument": [
+          495
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".16"
+          ]
+        },
+        "id": 423,
+        "name": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1091,
+          "absolutePath": "/contracts/ownership/Ownable.sol",
+          "file": "../ownership/Ownable.sol",
+          "scope": 496,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 424,
+        "name": "ImportDirective",
+        "src": "26:34:7"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            1090
+          ],
+          "contractKind": "contract",
+          "documentation": "@title Document\n@dev This basic contract allows to issue documents.",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            495,
+            1090
+          ],
+          "name": "BasicDocument",
+          "scope": 496
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 1090,
+                  "type": "contract Ownable"
+                },
+                "id": 425,
+                "name": "UserDefinedTypeName",
+                "src": "170:7:7"
+              }
+            ],
+            "id": 426,
+            "name": "InheritanceSpecifier",
+            "src": "170:7:7"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "DocumentIssued"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "recipient",
+                      "scope": 432,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 427,
+                        "name": "ElementaryTypeName",
+                        "src": "205:7:7"
+                      }
+                    ],
+                    "id": 428,
+                    "name": "VariableDeclaration",
+                    "src": "205:17:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "document",
+                      "scope": 432,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 429,
+                        "name": "ElementaryTypeName",
+                        "src": "224:7:7"
+                      }
+                    ],
+                    "id": 430,
+                    "name": "VariableDeclaration",
+                    "src": "224:16:7"
+                  }
+                ],
+                "id": 431,
+                "name": "ParameterList",
+                "src": "204:37:7"
+              }
+            ],
+            "id": 432,
+            "name": "EventDefinition",
+            "src": "184:58:7"
+          },
+          {
+            "attributes": {
+              "canonicalName": "BasicDocument.DocumentBody",
+              "name": "DocumentBody",
+              "scope": 495,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "issuer",
+                  "scope": 439,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 433,
+                    "name": "ElementaryTypeName",
+                    "src": "278:7:7"
+                  }
+                ],
+                "id": 434,
+                "name": "VariableDeclaration",
+                "src": "278:14:7"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "recipient",
+                  "scope": 439,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 435,
+                    "name": "ElementaryTypeName",
+                    "src": "302:7:7"
+                  }
+                ],
+                "id": 436,
+                "name": "VariableDeclaration",
+                "src": "302:17:7"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "block",
+                  "scope": 439,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 437,
+                    "name": "ElementaryTypeName",
+                    "src": "329:7:7"
+                  }
+                ],
+                "id": 438,
+                "name": "VariableDeclaration",
+                "src": "329:13:7"
+              }
+            ],
+            "id": 439,
+            "name": "StructDefinition",
+            "src": "248:101:7"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "documents",
+              "scope": 495,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 440,
+                    "name": "ElementaryTypeName",
+                    "src": "364:7:7"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "DocumentBody",
+                      "referencedDeclaration": 439,
+                      "type": "struct BasicDocument.DocumentBody storage pointer"
+                    },
+                    "id": 441,
+                    "name": "UserDefinedTypeName",
+                    "src": "375:12:7"
+                  }
+                ],
+                "id": 442,
+                "name": "Mapping",
+                "src": "355:33:7"
+              }
+            ],
+            "id": 443,
+            "name": "VariableDeclaration",
+            "src": "355:43:7"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "issueDocument",
+              "payable": true,
+              "scope": 495,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "recipient",
+                      "scope": 494,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 444,
+                        "name": "ElementaryTypeName",
+                        "src": "473:7:7"
+                      }
+                    ],
+                    "id": 445,
+                    "name": "VariableDeclaration",
+                    "src": "473:17:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "document",
+                      "scope": 494,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 446,
+                        "name": "ElementaryTypeName",
+                        "src": "492:7:7"
+                      }
+                    ],
+                    "id": 447,
+                    "name": "VariableDeclaration",
+                    "src": "492:16:7"
+                  }
+                ],
+                "id": 448,
+                "name": "ParameterList",
+                "src": "472:37:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 494,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 449,
+                        "name": "ElementaryTypeName",
+                        "src": "534:4:7"
+                      }
+                    ],
+                    "id": 450,
+                    "name": "VariableDeclaration",
+                    "src": "534:4:7"
+                  }
+                ],
+                "id": 451,
+                "name": "ParameterList",
+                "src": "533:6:7"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1105,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 452,
+                            "name": "Identifier",
+                            "src": "550:7:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "issuer",
+                                  "referencedDeclaration": 434,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct BasicDocument.DocumentBody storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 443,
+                                          "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)",
+                                          "value": "documents"
+                                        },
+                                        "id": 453,
+                                        "name": "Identifier",
+                                        "src": "558:9:7"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 447,
+                                          "type": "bytes32",
+                                          "value": "document"
+                                        },
+                                        "id": 454,
+                                        "name": "Identifier",
+                                        "src": "568:8:7"
+                                      }
+                                    ],
+                                    "id": 455,
+                                    "name": "IndexAccess",
+                                    "src": "558:19:7"
+                                  }
+                                ],
+                                "id": 456,
+                                "name": "MemberAccess",
+                                "src": "558:26:7"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "address",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_rational_0_by_1",
+                                          "typeString": "int_const 0"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(address)",
+                                      "value": "address"
+                                    },
+                                    "id": 457,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "588:7:7"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 458,
+                                    "name": "Literal",
+                                    "src": "596:1:7"
+                                  }
+                                ],
+                                "id": 459,
+                                "name": "FunctionCall",
+                                "src": "588:10:7"
+                              }
+                            ],
+                            "id": 460,
+                            "name": "BinaryOperation",
+                            "src": "558:40:7"
+                          }
+                        ],
+                        "id": 461,
+                        "name": "FunctionCall",
+                        "src": "550:49:7"
+                      }
+                    ],
+                    "id": 462,
+                    "name": "ExpressionStatement",
+                    "src": "550:49:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "issuer",
+                              "referencedDeclaration": 434,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct BasicDocument.DocumentBody storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 443,
+                                      "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)",
+                                      "value": "documents"
+                                    },
+                                    "id": 463,
+                                    "name": "Identifier",
+                                    "src": "610:9:7"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 447,
+                                      "type": "bytes32",
+                                      "value": "document"
+                                    },
+                                    "id": 464,
+                                    "name": "Identifier",
+                                    "src": "620:8:7"
+                                  }
+                                ],
+                                "id": 465,
+                                "name": "IndexAccess",
+                                "src": "610:19:7"
+                              }
+                            ],
+                            "id": 466,
+                            "name": "MemberAccess",
+                            "src": "610:26:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1102,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 467,
+                                "name": "Identifier",
+                                "src": "639:3:7"
+                              }
+                            ],
+                            "id": 468,
+                            "name": "MemberAccess",
+                            "src": "639:10:7"
+                          }
+                        ],
+                        "id": 469,
+                        "name": "Assignment",
+                        "src": "610:39:7"
+                      }
+                    ],
+                    "id": 470,
+                    "name": "ExpressionStatement",
+                    "src": "610:39:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "recipient",
+                              "referencedDeclaration": 436,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct BasicDocument.DocumentBody storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 443,
+                                      "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)",
+                                      "value": "documents"
+                                    },
+                                    "id": 471,
+                                    "name": "Identifier",
+                                    "src": "659:9:7"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 447,
+                                      "type": "bytes32",
+                                      "value": "document"
+                                    },
+                                    "id": 472,
+                                    "name": "Identifier",
+                                    "src": "669:8:7"
+                                  }
+                                ],
+                                "id": 473,
+                                "name": "IndexAccess",
+                                "src": "659:19:7"
+                              }
+                            ],
+                            "id": 474,
+                            "name": "MemberAccess",
+                            "src": "659:29:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 445,
+                              "type": "address",
+                              "value": "recipient"
+                            },
+                            "id": 475,
+                            "name": "Identifier",
+                            "src": "691:9:7"
+                          }
+                        ],
+                        "id": 476,
+                        "name": "Assignment",
+                        "src": "659:41:7"
+                      }
+                    ],
+                    "id": 477,
+                    "name": "ExpressionStatement",
+                    "src": "659:41:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "block",
+                              "referencedDeclaration": 438,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct BasicDocument.DocumentBody storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 443,
+                                      "type": "mapping(bytes32 => struct BasicDocument.DocumentBody storage ref)",
+                                      "value": "documents"
+                                    },
+                                    "id": 478,
+                                    "name": "Identifier",
+                                    "src": "710:9:7"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 447,
+                                      "type": "bytes32",
+                                      "value": "document"
+                                    },
+                                    "id": 479,
+                                    "name": "Identifier",
+                                    "src": "720:8:7"
+                                  }
+                                ],
+                                "id": 480,
+                                "name": "IndexAccess",
+                                "src": "710:19:7"
+                              }
+                            ],
+                            "id": 481,
+                            "name": "MemberAccess",
+                            "src": "710:25:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "number",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1094,
+                                  "type": "block",
+                                  "value": "block"
+                                },
+                                "id": 482,
+                                "name": "Identifier",
+                                "src": "738:5:7"
+                              }
+                            ],
+                            "id": 483,
+                            "name": "MemberAccess",
+                            "src": "738:12:7"
+                          }
+                        ],
+                        "id": 484,
+                        "name": "Assignment",
+                        "src": "710:40:7"
+                      }
+                    ],
+                    "id": 485,
+                    "name": "ExpressionStatement",
+                    "src": "710:40:7"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 432,
+                              "type": "function (address,bytes32)",
+                              "value": "DocumentIssued"
+                            },
+                            "id": 486,
+                            "name": "Identifier",
+                            "src": "761:14:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 445,
+                              "type": "address",
+                              "value": "recipient"
+                            },
+                            "id": 487,
+                            "name": "Identifier",
+                            "src": "776:9:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 447,
+                              "type": "bytes32",
+                              "value": "document"
+                            },
+                            "id": 488,
+                            "name": "Identifier",
+                            "src": "787:8:7"
+                          }
+                        ],
+                        "id": 489,
+                        "name": "FunctionCall",
+                        "src": "761:35:7"
+                      }
+                    ],
+                    "id": 490,
+                    "name": "ExpressionStatement",
+                    "src": "761:35:7"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 451
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 491,
+                        "name": "Literal",
+                        "src": "814:4:7"
+                      }
+                    ],
+                    "id": 492,
+                    "name": "Return",
+                    "src": "807:11:7"
+                  }
+                ],
+                "id": 493,
+                "name": "Block",
+                "src": "540:285:7"
+              }
+            ],
+            "id": 494,
+            "name": "FunctionDefinition",
+            "src": "450:375:7"
+          }
+        ],
+        "id": 495,
+        "name": "ContractDefinition",
+        "src": "144:683:7"
+      }
+    ],
+    "id": 496,
+    "name": "SourceUnit",
+    "src": "0:827:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-14T10:00:03.448Z"
+}
